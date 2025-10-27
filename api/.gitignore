@@ -1,0 +1,41 @@
+# Node
+node_modules/
+npm-debug.log*
+pnpm-lock.yaml
+
+# Ambiente
+.env
+.env.local
+.env.*.local
+
+# Build / Output
+dist/
+build/
+*.tsbuildinfo
+
+# Logs
+logs/
+*.log
+debug.log
+error.log
+
+# VSCode
+.vscode/
+
+# Docker
+docker-data/
+*.pid
+
+# Temp / Cache
+.tmp/
+.temp/
+.cache/
+
+# Drizzle
+drizzle/**/*.sqlite
+drizzle/*.db
+drizzle/migrations/*.sqlite
+
+# OS files
+.DS_Store
+Thumbs.db
