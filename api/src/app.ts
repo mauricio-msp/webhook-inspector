@@ -9,7 +9,10 @@ import {
   validatorCompiler,
   type ZodTypeProvider,
 } from 'fastify-type-provider-zod'
-
+import { captureWebhook } from '@/routes/capture-webhook'
+import { deleteWebhook } from '@/routes/delete-webhook'
+import { generateHandler } from '@/routes/generate-handler'
+import { getWebhook } from '@/routes/get-webhook'
 import { listWebhooks } from '@/routes/list-webhooks'
 
 export const app = fastify().withTypeProvider<ZodTypeProvider>()
@@ -40,3 +43,7 @@ app.register(ScalarApiReference, {
 
 // register routes http
 app.register(listWebhooks)
+app.register(getWebhook)
+app.register(deleteWebhook)
+app.register(captureWebhook)
+app.register(generateHandler)
